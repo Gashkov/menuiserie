@@ -66,10 +66,26 @@ a:hover {
 	font-style: italic;
 	font-size: 50px;
 }
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+    width: 500%; 
+  }
+
+  to {
+    width: 100%;
+  }
+}
 .title {
 	display: inline;
 	position: relative;
 	padding: 10px 20px;
+	font-weight: bold;
+
+	animation-duration: 3s;
+	animation-name: slidein;
+  animation-iteration-count: 1;
 	&:before {
 		content: '';
 		background: url(../img/corner-left.png) 100% 100% no-repeat;
@@ -132,9 +148,20 @@ a:hover {
 		background: url(../img/veranda.jpg) 100% 100% no-repeat;
 		background-size: cover;
 
+		&:hover {
+			background: url(../img/veranda-hover.jpg) 100% 100% no-repeat;
+			background-size: cover;
+			transition: 2s;
+		}
+
 		&:last-child {
 			background: url(../img/pergola.jpg) 100% 100% no-repeat;
 			background-size: cover;
+			&:hover {
+			background: url(../img/pergola-hover.jpg) 100% 100% no-repeat;
+			background-size: cover;
+			transition: 3s;
+		}
 		}
 	}
 
@@ -209,14 +236,67 @@ a:hover {
 	}
 
 	&__item {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		text-align: left;
 		width: 20%;
 		position: relative;
+		height: 220px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: #fff;
+
+		&:hover {
+			transition: 2s;
+			color: #fff;
+		}
+
+		&:nth-child(1) {
+			background-image: url(../img/news-first.jpg);
+			&:hover {
+				background-image: url(../img/news_first-hover.jpg);
+			}
+		}
+		&:nth-child(2) {
+			background-image: url(../img/news-second.jpg);
+			&:hover {
+				background-image: url(../img/news-second-hover.jpg);
+			}
+		}
+		&:nth-child(3) {
+			background-image: url(../img/news-third.jpg);
+			&:hover {
+				background-image: url(../img/news-third-hover.jpg);
+			}
+		}
+		&:nth-child(4) {
+			background-image: url(../img/news-fourth.jpg);
+			&:hover {
+				background-image: url(../img/news-fourth-hover.jpg);
+			}
+		}
+		&:nth-child(5) {
+			background-image: url(../img/news-fifth.jpg);
+			&:hover {
+				background-image: url(../img/news-fifth-hover.jpg);
+			}
+		}
+
 	}
-	
-	&__item-img {
-		width: 100%;
+
+	&__item-content {
+		position: absolute;
+		bottom: 15px;
+		left: 10px;
 	}
+
+	&__item-title {
+		font-size:26px;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
 
 	&__link {
 		color: $green;
@@ -225,6 +305,10 @@ a:hover {
 		text-transform: uppercase;
 		border: 2px solid $green;
 		padding: 3px 10px;
+		font-size: 24px;
+		&:hover {
+			color: $green;
+		}
 	}
 }
 
