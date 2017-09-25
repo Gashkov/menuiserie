@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
+body {
+  font-family: 'Lato', sans-serif;
+  background: #fff; }
+
+.navbar__custom {
+  width: 100%;
+  background: none;
+  padding: 0 1rem; }
+
+.navbar-collapse__custom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #00a24c; }
+
+.navbar-collapse__custom span {
+  font-size: 21px;
+  padding: 10px 15px; }
+
+.nav-item__custom {
+  color: #00a24c !important;
+  font-size: 21px; }
+
+.navbar-brand {
+  margin-bottom: -45px;
+  margin-top: 10px;
+  z-index: 1; }
+
+.title-block {
+  padding: 50px 0;
+  background: url(../img/banner.jpg) no-repeat center; }
