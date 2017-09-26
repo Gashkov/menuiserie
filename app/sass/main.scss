@@ -31,13 +31,22 @@ a:hover {
 	color: $green;
 }
 .navbar-collapse__custom span {
-	font-size: 21px;
+	font-size: 17px;
 	padding: 10px 10px;
+	vertical-align: middle;
 }
 .nav-item__custom {
 	color: $green !important;
-	font-size: 21px;
+	font-size: 17px;
 	position: relative;
+
+	&:active {
+		color: #8e8e92 !important;
+	}
+
+	&:focus {
+		color: #8e8e92 !important;
+	}
 
 	&:last-child {
 		padding-right: 0 !important;
@@ -106,11 +115,24 @@ a:hover {
 		bottom: -15px;
 	}
 }
+.carousel-content {
+	width: 100%;
+	height: 640px;
+	background: url(../img/banner.jpg) 100% 100% no-repeat;
+	background-size: cover;
+
+	&_second {
+		background: url(../img/banner2.jpg) 100% 100% no-repeat;
+		background-size: cover;
+	}
+}
+
+
 // down-link
 
 .down-link-wrap {
 	position: absolute;
-	bottom: 90px;
+	bottom: 30px;
 	left: 0;
 	right: 0;
 	text-align: center;
@@ -145,8 +167,10 @@ a:hover {
 
 	&__block {
 		width: 50%;
-		background: url(../img/veranda.jpg) 100% 100% no-repeat;
+		background-image: url(../img/veranda.jpg);
+		background-repeat: no-repeat;
 		background-size: cover;
+		transition: 3s;
 
 		&:hover {
 			background: url(../img/veranda-hover.jpg) 100% 100% no-repeat;
@@ -154,14 +178,20 @@ a:hover {
 			transition: 2s;
 		}
 
-		&:last-child {
-			background: url(../img/pergola.jpg) 100% 100% no-repeat;
-			background-size: cover;
-			&:hover {
-			background: url(../img/pergola-hover.jpg) 100% 100% no-repeat;
-			background-size: cover;
-			transition: 3s;
+		&:hover .items__title {
+			transform: rotate(360deg);
+		 	transition: .7s;
 		}
+
+		&:last-child {
+			background-image: url(../img/pergola.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+				&:hover {
+				background: url(../img/pergola-hover.jpg) 100% 100% no-repeat;
+				background-size: cover;
+				transition: 3s;
+			}
 		}
 	}
 
@@ -185,6 +215,7 @@ a:hover {
   	display: inline-block;
   	padding: 5px 10px;
   	position: relative;
+  	transition: .7s;
 
   	&:before {
   		content: '';
@@ -205,10 +236,6 @@ a:hover {
 			height: 28px;
 			right: -25px;
 			bottom: -10px;
-		}
-		&:hover {
-			transform: rotate(360deg);
-			transition: .7s;
 		}
 	}
 }
@@ -246,9 +273,10 @@ a:hover {
 		background-size: cover;
 		background-repeat: no-repeat;
 		color: #fff;
+		transition: 2s;
 
 		&:hover {
-			transition: 2s;
+			transition: 1s;
 			color: #fff;
 		}
 
@@ -306,8 +334,11 @@ a:hover {
 		border: 2px solid $green;
 		padding: 3px 10px;
 		font-size: 24px;
+		transition: .5s;
 		&:hover {
-			color: $green;
+			color: #fff;
+			background-color: $green;
+			transition: .5s;
 		}
 	}
 }

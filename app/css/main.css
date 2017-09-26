@@ -26,13 +26,18 @@ a:hover {
   color: #00a24c; }
 
 .navbar-collapse__custom span {
-  font-size: 21px;
-  padding: 10px 10px; }
+  font-size: 17px;
+  padding: 10px 10px;
+  vertical-align: middle; }
 
 .nav-item__custom {
   color: #00a24c !important;
-  font-size: 21px;
+  font-size: 17px;
   position: relative; }
+  .nav-item__custom:active {
+    color: #8e8e92 !important; }
+  .nav-item__custom:focus {
+    color: #8e8e92 !important; }
   .nav-item__custom:last-child {
     padding-right: 0 !important; }
 
@@ -99,9 +104,18 @@ a:hover {
     right: -15px;
     bottom: -15px; }
 
+.carousel-content {
+  width: 100%;
+  height: 640px;
+  background: url(../img/banner.jpg) 100% 100% no-repeat;
+  background-size: cover; }
+  .carousel-content_second {
+    background: url(../img/banner2.jpg) 100% 100% no-repeat;
+    background-size: cover; }
+
 .down-link-wrap {
   position: absolute;
-  bottom: 90px;
+  bottom: 30px;
   left: 0;
   right: 0;
   text-align: center; }
@@ -129,15 +143,25 @@ a:hover {
   display: flex; }
   .items__block {
     width: 50%;
-    background: url(../img/veranda.jpg) 100% 100% no-repeat;
-    background-size: cover; }
+    background-image: url(../img/veranda.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: 3s;
+    transition: 3s; }
     .items__block:hover {
       background: url(../img/veranda-hover.jpg) 100% 100% no-repeat;
       background-size: cover;
       -webkit-transition: 2s;
       transition: 2s; }
+    .items__block:hover .items__title {
+      -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+              transform: rotate(360deg);
+      -webkit-transition: .7s;
+      transition: .7s; }
     .items__block:last-child {
-      background: url(../img/pergola.jpg) 100% 100% no-repeat;
+      background-image: url(../img/pergola.jpg);
+      background-repeat: no-repeat;
       background-size: cover; }
       .items__block:last-child:hover {
         background: url(../img/pergola-hover.jpg) 100% 100% no-repeat;
@@ -160,7 +184,9 @@ a:hover {
     -ms-transform: matrix(0.83838, 0, 0, 0.84095, 0, 0);
     display: inline-block;
     padding: 5px 10px;
-    position: relative; }
+    position: relative;
+    -webkit-transition: .7s;
+    transition: .7s; }
     .items__title:before {
       content: '';
       background: url(../img/corner-left.png) 100% 100% no-repeat;
@@ -179,12 +205,6 @@ a:hover {
       height: 28px;
       right: -25px;
       bottom: -10px; }
-    .items__title:hover {
-      -webkit-transform: rotate(360deg);
-          -ms-transform: rotate(360deg);
-              transform: rotate(360deg);
-      -webkit-transition: .7s;
-      transition: .7s; }
 
 .news {
   padding: 50px 0 80px 0;
@@ -222,10 +242,12 @@ a:hover {
     height: 220px;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: 2s;
+    transition: 2s; }
     .news__item:hover {
-      -webkit-transition: 2s;
-      transition: 2s;
+      -webkit-transition: 1s;
+      transition: 1s;
       color: #fff; }
     .news__item:nth-child(1) {
       background-image: url(../img/news-first.jpg); }

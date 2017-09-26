@@ -22,15 +22,15 @@
             </a>
             <div class="collapse navbar-collapse navbar-collapse__custom" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-item__custom nav-link active ancLinks" href="#main">Accueil<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-item__custom nav-link active" href="#">Accueil<span class="sr-only">(current)</span></a>
                 <span class="separator"> | </span>
-                <a class="nav-item nav-item__custom nav-link ancLinks" href="#presentation">Présentation</a>
+                <a class="nav-item nav-item__custom nav-link" href="#">Présentation</a>
                 <span class="separator"> | </span>
-                <a class="nav-item nav-item__custom nav-link ancLinks" href="#products">Nos produits</a>
+                <a class="nav-item nav-item__custom nav-link" href="#">Nos produits</a>
                 <span class="separator"> | </span>
-                <a class="nav-item nav-item__custom nav-link ancLinks" href="#news">Actualités</a>
+                <a class="nav-item nav-item__custom nav-link" href="#">Actualités</a>
                 <span class="separator"> | </span>
-                <a class="nav-item nav-item__custom nav-link ancLinks" href="#contact">Contact</a>
+                <a class="nav-item nav-item__custom nav-link" href="#">Contact</a>
               </div>
             </div>
           </nav>
@@ -41,25 +41,28 @@
     <div class="wpar-title">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
-          <div id="main" class="carousel-item active">
-            <img class="d-block img-fluid" src="img/banner.jpg" alt="First slide">
-            <div class="title-block">
-              <h1 class="title">Ouverture et fermeture de l’habitat</h1>
+          <div class="carousel-item active">
+            <div class="carousel-content">
+              <div class="title-block">
+                <h1 class="title">Ouverture et fermeture de l’habitat</h1>
+              </div>
             </div>
           </div>
-          <!-- <div class="carousel-item">
-            <img class="d-block img-fluid" src="img/banner2.jpg" alt="Second slide">
-            <div class="title-block">
-              <h1 class="title">Ouverture et fermeture de l’habitat</h1>
+         <!--  <div class="carousel-item">
+            <div class="carousel-content carousel-content_second">
+              <div class="title-block">
+                <h1 class="title">Ouverture et fermeture de l’habitat</h1>
+              </div>
             </div>
           </div> -->
+          <div class="down-link-wrap">
+            <a href="#presentation" class="down-link ancLinks">
+              <img src="img/down-icon.png" alt="icon" class="down-link-img">
+            </a>
+          </div>
         </div>
       </div>
-      <div class="down-link-wrap">
-        <a href="#presentation" class="down-link ancLinks">
-          <img src="img/down-icon.png" alt="icon" class="down-link-img">
-        </a>
-      </div>
+      
     </div>
     <div class="presentation container">
       <div class="row">
@@ -81,7 +84,7 @@
       </div>
     </div><!--presentation finish-->
     <div class="items">
-      <div id="products" class="items__block">
+      <div class="items__block">
         <div class="items__wrap-title">
           <h3 class="items__title">Véranda</h3>
         </div>
@@ -93,7 +96,7 @@
       </div>
     </div> <!--items finish-->
     <div class="news">
-      <h2 id="news" class="news__title">Nos <span class="news__title-bold">actualités</span></h2>
+      <h2 class="news__title">Nos <span class="news__title-bold">actualités</span></h2>
       <div class="news__wrap-item">
         <a href="#" class="news__item text-left">
           <div class="news__item-content">
@@ -175,7 +178,7 @@
       </div>
     </div>
 
-    <footer id="contact" class="footer">
+    <footer class="footer">
       <ul class="footer__list">
         <li class="footer__list-item"><a href="#" class="footer__list-link">Mentions légales</a></li>
         <span class="footer__separator">|</span>
