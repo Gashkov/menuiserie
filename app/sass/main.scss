@@ -92,15 +92,19 @@ a:hover {
 //     width: 100%;
 //   }
 // }
+
 .title {
 	display: inline;
 	position: relative;
 	padding: 10px 20px;
 	font-weight: bold;
 
-	// animation-duration: 3s;
-	// animation-name: slidein;
- //  animation-iteration-count: 1;
+	// &_animate {
+	// 	animation-duration: 3s;
+	// 	animation-name: slidein;
+	//   animation-iteration-count: 1;
+	// }
+
 	&:before {
 		content: '';
 		background: url(../img/corner-left.png) 100% 100% no-repeat;
@@ -173,28 +177,32 @@ a:hover {
 
 	&__block {
 		width: 50%;
-		background-image: url(../img/veranda.jpg);
+		background-image: url(../img/veranda-hover.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		transition: 3s;
 
 		&:hover {
-			background: url(../img/veranda-hover.jpg) 100% 100% no-repeat;
 			background-size: cover;
+			transition: 2s;
+		}
+
+		&:hover .items__wrap-title {
+			background-color: rgba(0, 0, 0, 0);
 			transition: 2s;
 		}
 
 		&:hover .items__title {
 			transform: rotate(360deg);
 		 	transition: .7s;
+
 		}
 
 		&:last-child {
-			background-image: url(../img/pergola.jpg);
+			background-image: url(../img/pergola-hover.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 				&:hover {
-				background: url(../img/pergola-hover.jpg) 100% 100% no-repeat;
 				background-size: cover;
 				transition: 3s;
 			}
@@ -204,7 +212,8 @@ a:hover {
 	&__wrap-title {
 		padding: 220px 0;
 		text-align: center;
-
+		background-color: rgba(0, 0, 0, 0.5);
+		transition: 2s;
 	}
 
 	&__title {
@@ -268,6 +277,8 @@ a:hover {
 		margin-top: 40px;
 	}
 
+
+
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -280,8 +291,10 @@ a:hover {
 		background-repeat: no-repeat;
 		color: #fff;
 		transition: 2s;
+		
 
-		&:hover {
+		&:hover .news__item-inside-wrap {
+			background-color: rgba(0, 0, 0, 0);
 			transition: 1s;
 			color: #fff;
 		}
@@ -291,36 +304,43 @@ a:hover {
 		}
 
 		&:nth-child(1) {
-			background-image: url(../img/news-first.jpg);
+			background-image: url(../img/news_first-hover.jpg);
+
 			&:hover {
-				background-image: url(../img/news_first-hover.jpg);
+				// background-image: url(../img/news_first-hover.jpg);
 			}
 		}
 		&:nth-child(2) {
-			background-image: url(../img/news-second.jpg);
+			background-image: url(../img/news-second-hover.jpg);
 			&:hover {
-				background-image: url(../img/news-second-hover.jpg);
+				// background-image: url(../img/news-second-hover.jpg);
 			}
 		}
 		&:nth-child(3) {
-			background-image: url(../img/news-third.jpg);
+			background-image: url(../img/news-third-hover.jpg);
 			&:hover {
-				background-image: url(../img/news-third-hover.jpg);
+				// background-image: url(../img/news-third-hover.jpg);
 			}
 		}
 		&:nth-child(4) {
-			background-image: url(../img/news-fourth.jpg);
+			background-image: url(../img/news-fourth-hover.jpg);
 			&:hover {
-				background-image: url(../img/news-fourth-hover.jpg);
+				// background-image: url(../img/news-fourth-hover.jpg);
 			}
 		}
 		&:nth-child(5) {
-			background-image: url(../img/news-fifth.jpg);
+			background-image: url(../img/news-fifth-hover.jpg);
 			&:hover {
-				background-image: url(../img/news-fifth-hover.jpg);
+				// background-image: url(../img/news-fifth-hover.jpg);
 			}
 		}
 
+	}
+
+	&__item-inside-wrap {
+		flex: 1;
+		background-color: rgba(0, 0, 0, .4);
+		transition: 1s;
 	}
 
 	&__item-content {
