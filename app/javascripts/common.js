@@ -7,6 +7,13 @@ $(document).ready(function() {
       return false;
     });
 
+    // title animation
+
+    setTimeout(function(){
+      var item = document.getElementById('slider-first');
+      window.removeEventListener('resize', false);
+      item.remove();
+    },7000)
 
     
   });
